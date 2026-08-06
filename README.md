@@ -4,10 +4,10 @@
 
 ### A curated collection of production-ready subagents for [Gemini CLI](https://github.com/google-gemini/gemini-cli).
 
-**51 specialist subagents** across 9 domains — drop them into `.gemini/agents/` and let Gemini CLI delegate the right expert for the job.
+**81 specialist subagents** across 9 domains — drop them into `.gemini/agents/` and let Gemini CLI delegate the right expert for the job.
 
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](LICENSE)
-![Subagents](https://img.shields.io/badge/subagents-51-4285F4)
+![Subagents](https://img.shields.io/badge/subagents-81-4285F4)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 ![Gemini CLI](https://img.shields.io/badge/for-Gemini%20CLI-8E75B2)
 
@@ -101,6 +101,10 @@ See the [official Gemini CLI subagents docs](https://geminicli.com/docs/core/sub
 | [`api-designer`](agents/core-development/api-designer.md) | Clean, consistent REST / GraphQL / gRPC contracts |
 | [`microservices-architect`](agents/core-development/microservices-architect.md) | Service decomposition and distributed-system design |
 | [`mobile-app-developer`](agents/core-development/mobile-app-developer.md) | Cross-platform and native mobile features |
+| [`graphql-architect`](agents/core-development/graphql-architect.md) | GraphQL schemas, resolvers, and federation without N+1s |
+| [`electron-desktop-developer`](agents/core-development/electron-desktop-developer.md) | Secure Electron apps with native-feeling UX |
+| [`browser-extension-developer`](agents/core-development/browser-extension-developer.md) | Manifest V3 extensions for Chrome and Firefox |
+| [`realtime-websocket-engineer`](agents/core-development/realtime-websocket-engineer.md) | WebSocket / SSE systems that survive disconnects |
 
 ### 🧠 Language Specialists
 
@@ -113,6 +117,16 @@ See the [official Gemini CLI subagents docs](https://geminicli.com/docs/core/sub
 | [`java-pro`](agents/language-specialists/java-pro.md) | Modern Java and the JVM ecosystem |
 | [`react-pro`](agents/language-specialists/react-pro.md) | Modern React patterns, hooks, and performance |
 | [`nextjs-pro`](agents/language-specialists/nextjs-pro.md) | Next.js App Router, server components, and rendering strategy |
+| [`vue-pro`](agents/language-specialists/vue-pro.md) | Vue 3 Composition API, Pinia, and Nuxt |
+| [`angular-pro`](agents/language-specialists/angular-pro.md) | Modern Angular with signals and standalone components |
+| [`svelte-pro`](agents/language-specialists/svelte-pro.md) | Svelte 5 runes and SvelteKit |
+| [`flutter-pro`](agents/language-specialists/flutter-pro.md) | Flutter and Dart for fast native-feeling apps |
+| [`swift-ios-pro`](agents/language-specialists/swift-ios-pro.md) | SwiftUI and structured concurrency on iOS |
+| [`kotlin-android-pro`](agents/language-specialists/kotlin-android-pro.md) | Kotlin and Jetpack Compose on Android |
+| [`csharp-dotnet-pro`](agents/language-specialists/csharp-dotnet-pro.md) | Modern C# and ASP.NET Core |
+| [`laravel-pro`](agents/language-specialists/laravel-pro.md) | PHP and Laravel the way the framework intends |
+| [`rails-pro`](agents/language-specialists/rails-pro.md) | Ruby on Rails with convention over configuration |
+| [`cpp-pro`](agents/language-specialists/cpp-pro.md) | Modern C++ with RAII discipline and sanitizers |
 
 ### ☁️ Infrastructure & DevOps
 
@@ -124,6 +138,11 @@ See the [official Gemini CLI subagents docs](https://geminicli.com/docs/core/sub
 | [`cloud-architect`](agents/infrastructure-devops/cloud-architect.md) | Cloud infra on AWS / GCP / Azure with cost in mind |
 | [`docker-specialist`](agents/infrastructure-devops/docker-specialist.md) | Lean, secure Dockerfiles and Compose setups |
 | [`sre-incident-responder`](agents/infrastructure-devops/sre-incident-responder.md) | Incident triage and blameless postmortems |
+| [`aws-specialist`](agents/infrastructure-devops/aws-specialist.md) | AWS services, IAM, networking, and cost awareness |
+| [`github-actions-specialist`](agents/infrastructure-devops/github-actions-specialist.md) | Fast, secure GitHub Actions pipelines |
+| [`serverless-architect`](agents/infrastructure-devops/serverless-architect.md) | Event-driven serverless with idempotency built in |
+| [`observability-engineer`](agents/infrastructure-devops/observability-engineer.md) | Logs, metrics, traces, SLOs, and alerts that matter |
+| [`cicd-pipeline-engineer`](agents/infrastructure-devops/cicd-pipeline-engineer.md) | Build-once promotion pipelines with tested rollback |
 
 ### ✅ Quality & Testing
 
@@ -135,6 +154,8 @@ See the [official Gemini CLI subagents docs](https://geminicli.com/docs/core/sub
 | [`performance-optimizer`](agents/quality-testing/performance-optimizer.md) | Evidence-based performance fixes |
 | [`debugger`](agents/quality-testing/debugger.md) | Systematic root-cause debugging |
 | [`refactoring-specialist`](agents/quality-testing/refactoring-specialist.md) | Safe, behaviour-preserving refactors |
+| [`load-testing-engineer`](agents/quality-testing/load-testing-engineer.md) | Realistic load tests that name the bottleneck |
+| [`visual-regression-tester`](agents/quality-testing/visual-regression-tester.md) | Flake-proof screenshot testing for UI changes |
 
 ### 🛡️ Security
 
@@ -145,6 +166,7 @@ See the [official Gemini CLI subagents docs](https://geminicli.com/docs/core/sub
 | [`secrets-detector`](agents/security/secrets-detector.md) | Detect committed secrets so they can be rotated and removed |
 | [`threat-modeler`](agents/security/threat-modeler.md) | Design-time STRIDE threat modeling |
 | [`auth-reviewer`](agents/security/auth-reviewer.md) | Review authentication and authorization logic |
+| [`container-security-auditor`](agents/security/container-security-auditor.md) | Image, Kubernetes, and supply-chain hardening |
 
 ### 📊 Data, AI & Databases
 
@@ -157,6 +179,12 @@ See the [official Gemini CLI subagents docs](https://geminicli.com/docs/core/sub
 | [`postgres-expert`](agents/data-ai-databases/postgres-expert.md) | Deep PostgreSQL tuning and features |
 | [`database-designer`](agents/data-ai-databases/database-designer.md) | Relational schema and data modeling |
 | [`analytics-engineer`](agents/data-ai-databases/analytics-engineer.md) | Trustworthy analytics models and metrics |
+| [`llm-integration-engineer`](agents/data-ai-databases/llm-integration-engineer.md) | LLM product features with evals and cost control |
+| [`rag-architect`](agents/data-ai-databases/rag-architect.md) | Retrieval-augmented generation that cites its sources |
+| [`mongodb-expert`](agents/data-ai-databases/mongodb-expert.md) | Document modelling and aggregation performance |
+| [`redis-expert`](agents/data-ai-databases/redis-expert.md) | Caching, queues, and realtime data in Redis |
+| [`mlops-engineer`](agents/data-ai-databases/mlops-engineer.md) | Reproducible training pipelines and monitored models |
+| [`data-visualization-engineer`](agents/data-ai-databases/data-visualization-engineer.md) | Honest, fast charts and dashboards |
 
 ### 🧰 Developer Experience
 
@@ -167,6 +195,7 @@ See the [official Gemini CLI subagents docs](https://geminicli.com/docs/core/sub
 | [`git-workflow-manager`](agents/developer-experience/git-workflow-manager.md) | Clean Git history and workflow |
 | [`dependency-upgrader`](agents/developer-experience/dependency-upgrader.md) | Safe, staged dependency upgrades |
 | [`dx-optimizer`](agents/developer-experience/dx-optimizer.md) | Faster builds and a smoother local dev loop |
+| [`monorepo-manager`](agents/developer-experience/monorepo-manager.md) | Turborepo / Nx / workspaces with trustworthy caching |
 
 ### 🎯 Specialized Domains
 
@@ -177,6 +206,7 @@ See the [official Gemini CLI subagents docs](https://geminicli.com/docs/core/sub
 | [`blockchain-developer`](agents/specialized-domains/blockchain-developer.md) | Smart contracts and on-chain safety |
 | [`game-developer`](agents/specialized-domains/game-developer.md) | Gameplay systems and real-time performance |
 | [`embedded-systems-engineer`](agents/specialized-domains/embedded-systems-engineer.md) | Firmware for resource-constrained devices |
+| [`stripe-payments-integrator`](agents/specialized-domains/stripe-payments-integrator.md) | Payment flows and webhooks treated as safety-critical |
 
 ### 🧭 Product & Orchestration
 
