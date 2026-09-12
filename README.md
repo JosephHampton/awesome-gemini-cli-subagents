@@ -41,6 +41,7 @@ cd awesome-gemini-cli-subagents
 **Install one agent manually:**
 
 ```bash
+- [Ivy Tendril](https://github.com/Ivy-Interactive/Ivy-Tendril) - Open-source developer tool with an amazing desktop & web UI that handles parallel Git worktrees, programmatic verifications, and agent review loops.
 # User-level (all projects)
 cp agents/quality-testing/code-reviewer.md ~/.gemini/agents/
 
