@@ -9,4 +9,5 @@
 - [ ] The system prompt is focused: one clear responsibility, with focus areas, a method, and explicit guardrails
 - [ ] Read-only agents (reviewers, auditors) do not request write tools
 - [ ] Security agents are framed defensively (audit, detect, harden, remediate)
-- [ ] Added a row for the agent in the matching table in `README.md`
+- [ ] Added a row for the agent in the matching table in `README.md` and bumped the count badge
+- [ ] Ran `./scripts/build-antigravity.sh` and `./scripts/validate.sh` (CI runs the same checks)

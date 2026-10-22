@@ -1,6 +1,6 @@
 ---
 name: Propose a new subagent
-about: Suggest a new Gemini CLI subagent for the collection
+about: Suggest a new subagent for Gemini CLI and Antigravity CLI
 title: "[agent] <name>"
 labels: new-agent
 ---
