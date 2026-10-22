@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping grow this collection. Contributions of new subagents, improved prompts, and fixes are all welcome.
+Thanks for helping grow this collection of subagents for Gemini CLI and Antigravity CLI. Contributions of new subagents, improved prompts, and fixes are all welcome.
 
 ## Adding a new subagent
 
@@ -23,7 +23,15 @@ max_turns: 20                   # optional
 You are a ... [the system prompt: role, when invoked, focus areas, method, output, guardrails]
 ```
 
-4. Add a row for it in the matching table in `README.md`.
+4. Add a row for it in the matching table in `README.md` and bump the `subagents-N` badge.
+5. Regenerate the Antigravity version and run the checks CI runs:
+
+```bash
+./scripts/build-antigravity.sh
+./scripts/validate.sh
+```
+
+Only edit files in `agents/`. Everything in `antigravity/` is generated from them, so edits there are overwritten.
 
 ## Quality bar
 

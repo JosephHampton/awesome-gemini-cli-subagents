@@ -1,0 +1,22 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  agents:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate agents, README and the Antigravity plugin
+        run: ./scripts/validate.sh
+      - name: Installer smoke test
+        run: |
+          HOME="$(mktemp -d)" ./install-agents.sh
+          HOME="$(mktemp -d)" ./install-agents.sh --antigravity --category security
+          ./install-agents.sh --list > /dev/null
