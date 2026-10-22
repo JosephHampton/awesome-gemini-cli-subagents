@@ -1,15 +1,19 @@
 <div align="center">
 
-# 🤖 Awesome Gemini CLI Subagents [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# 🤖 Awesome Gemini CLI & Antigravity Subagents [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-### A curated collection of production-ready subagents for [Gemini CLI](https://github.com/google-gemini/gemini-cli).
+### 81 production-ready subagents for [Gemini CLI](https://github.com/google-gemini/gemini-cli) and [Antigravity CLI](https://antigravity.google/docs/subagents).
 
-**81 specialist subagents** across 9 domains — drop them into `.gemini/agents/` and let Gemini CLI delegate the right expert for the job.
+Code review, security audits, testing, DevOps, data and AI, and 17 language and framework experts. Install them in one line and let the main agent delegate to the right specialist.
 
-[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](LICENSE)
+[![validate](https://github.com/JosephHampton/awesome-gemini-cli-subagents/actions/workflows/validate.yml/badge.svg)](https://github.com/JosephHampton/awesome-gemini-cli-subagents/actions/workflows/validate.yml)
 ![Subagents](https://img.shields.io/badge/subagents-81-4285F4)
+![Gemini CLI](https://img.shields.io/badge/Gemini%20CLI-supported-8E75B2)
+![Antigravity CLI](https://img.shields.io/badge/Antigravity%20CLI-supported-34A853)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-![Gemini CLI](https://img.shields.io/badge/for-Gemini%20CLI-8E75B2)
+
+[Install](#-install) · [The collection](#-the-collection) · [Recipes](#-recipes) · [Agent format](#-agent-format) · [FAQ](#-faq) · [Contributing](CONTRIBUTING.md)
 
 </div>
 
@@ -17,75 +21,59 @@
 
 ## What is this?
 
-[Gemini CLI](https://github.com/google-gemini/gemini-cli) supports **subagents**: focused, specialist AI assistants that the main agent can delegate to. Each subagent has its own system prompt, its own tools, and its own context window, so it stays sharp on one job instead of trying to be good at everything.
+Gemini CLI and Antigravity CLI both support **subagents**: specialist assistants the main agent hands work to. Each one has its own system prompt, its own tools and its own context window, so it stays sharp on one job instead of being average at everything.
 
-This repo is a curated, ready-to-use library of them. Every agent is a single Markdown file with the official frontmatter format, written to be genuinely useful rather than a one-line stub. Copy the ones you want and go.
+This repo is a curated library of them. Every agent is a single Markdown file with a real, opinionated system prompt (focus areas, a method, an output format and guardrails), not a one-line stub. Each one ships in **both formats**, checked automatically on every change.
 
-## Why subagents?
+- **Focused.** A `code-reviewer` that only reviews beats a general assistant that sometimes reviews.
+- **Isolated context.** A big investigation runs in the subagent's window, not yours.
+- **Scoped tools.** Reviewers and auditors get no file-writing tools, so they report problems instead of quietly changing your code.
+- **Composable.** Let `tech-lead-orchestrator` plan, then hand the pieces to the specialists (see [Recipes](#-recipes)).
 
-- **Focus** — a `code-reviewer` that only reviews beats a general assistant that sometimes reviews.
-- **Isolated context** — each subagent works in its own context window, so a big task does not pollute your main conversation.
-- **Tool scoping** — a read-only `security-auditor` cannot accidentally write files; tools are declared per agent.
-- **Composability** — chain them. Let `tech-lead-orchestrator` plan, then hand pieces to the specialists.
+## 🚀 Install
 
-## Quick start
+**One line, no clone needed:**
 
-**Install everything (user-level, available in every project):**
+```bash
+# Gemini CLI
+curl -fsSL https://raw.githubusercontent.com/JosephHampton/awesome-gemini-cli-subagents/main/install-agents.sh | bash
+
+# Antigravity CLI (agy)
+curl -fsSL https://raw.githubusercontent.com/JosephHampton/awesome-gemini-cli-subagents/main/install-agents.sh | bash -s -- --antigravity
+```
+
+**Or clone and pick what you want:**
 
 ```bash
 git clone https://github.com/JosephHampton/awesome-gemini-cli-subagents.git
 cd awesome-gemini-cli-subagents
-./install-agents.sh          # copies all agents to ~/.gemini/agents/
+
+./install-agents.sh --list                           # see every category and agent
+./install-agents.sh --category security              # just one category (repeatable)
+./install-agents.sh --project                        # this project only, shareable with your team
+./install-agents.sh --antigravity --category quality-testing
+./install-agents.sh --uninstall                      # remove them again
 ```
 
-**Install one agent manually:**
+**Antigravity users can also install it as a plugin:**
 
 ```bash
-# User-level (all projects)
-cp agents/quality-testing/code-reviewer.md ~/.gemini/agents/
-
-# Project-level (this repo only, shareable with your team)
-mkdir -p .gemini/agents
-cp agents/quality-testing/code-reviewer.md .gemini/agents/
+agy plugin install ./antigravity/awesome-subagents
 ```
 
-Then in Gemini CLI just describe the work — *"review this diff for security issues"* — and it will delegate to the matching subagent. You can also list and manage them with the `/agents` command.
+| | Gemini CLI | Antigravity CLI |
+|---|---|---|
+| User-level (every project) | `~/.gemini/agents/` | `~/.gemini/config/agents/` |
+| Project-level | `.gemini/agents/` | `.agents/agents/` |
+| Source files | [`agents/`](agents) | [`antigravity/awesome-subagents/`](antigravity/awesome-subagents) |
 
-## How a subagent is defined
+Then just describe the work, e.g. *"review this diff for security issues"*, and the main agent delegates to the matching subagent. In Gemini CLI you can also call one directly with `@security-auditor`, or manage them with `/agents`.
 
-Every agent is a Markdown file with YAML frontmatter. The body becomes the agent's system prompt:
-
-```markdown
----
-name: security-auditor
-description: Reviews code for security weaknesses and recommends fixes.
-kind: local
-tools:
-  - read_file
-  - grep_search
-model: gemini-3-pro-preview
-temperature: 0.2
-max_turns: 20
----
-You are a defensive security reviewer. Your job is to help teams find and
-fix weaknesses in their own code before release...
-```
-
-| Field | Required | Purpose |
-|-------|:--------:|---------|
-| `name` | ✅ | Unique slug used as the tool name |
-| `description` | ✅ | When to use this agent (helps the router pick it) |
-| `kind` | | `local` (default) or `remote` |
-| `tools` | | Tool allowlist; supports `*` and `mcp_*` wildcards |
-| `model` | | Pin a model, or inherit the session's |
-| `temperature` | | `0.0`–`2.0` |
-| `max_turns` | | Turn budget for the agent |
-
-See the [official Gemini CLI subagents docs](https://geminicli.com/docs/core/subagents/) for the full reference.
+> **Moving from Gemini CLI to Antigravity?** Your `.gemini/agents/*.md` files will not load in Antigravity as they are: it rejects Gemini model names such as `gemini-3-pro-preview` and uses different tool names. Run `./install-agents.sh --antigravity` to get versions converted for it.
 
 ---
 
-## 📚 The Collection
+## 📚 The collection
 
 - [🏗️ Core Development](#-core-development) · [🧠 Language Specialists](#-language-specialists) · [☁️ Infrastructure & DevOps](#-infrastructure--devops)
 - [✅ Quality & Testing](#-quality--testing) · [🛡️ Security](#-security) · [📊 Data, AI & Databases](#-data-ai--databases)
@@ -217,18 +205,108 @@ See the [official Gemini CLI subagents docs](https://geminicli.com/docs/core/sub
 | [`code-archaeologist`](agents/product-orchestration/code-archaeologist.md) | Understand legacy and unfamiliar codebases |
 | [`agent-workflow-designer`](agents/product-orchestration/agent-workflow-designer.md) | Design multi-agent workflows and pipelines |
 
+
 ---
+
+## 🧪 Recipes
+
+Subagents are most useful in combination. A few that work well together:
+
+| Goal | Hand it to | Prompt to try |
+|------|------------|---------------|
+| Ship a feature safely | `tech-lead-orchestrator` → specialists → `code-reviewer` | *"Plan this feature, build it, then review the diff before I commit."* |
+| Pre-release security pass | `threat-modeler` → `security-auditor` → `auth-reviewer` → `dependency-auditor` | *"Do a security pass on the payments module before release."* |
+| Fix a nasty bug | `debugger` → `test-automator` | *"Find the root cause of this failing test, fix it, and add a regression test."* |
+| Make it faster | `performance-optimizer` → `load-testing-engineer` | *"Profile the checkout API and prove the fix under load."* |
+| Get to grips with a legacy codebase | `code-archaeologist` → `documentation-writer` | *"Explain how billing works here and write it up for new joiners."* |
+| Clean up safely | `refactoring-specialist` → `test-automator` | *"Refactor this module without changing behaviour, tests first."* |
+| Production incident | `sre-incident-responder` → `observability-engineer` | *"Triage this outage, then add the alert that would have caught it."* |
+| Scope a new product idea | `product-strategist` → `api-designer` → `backend-architect` | *"Turn this idea into a scoped spec and an API design."* |
+
+## 📐 Agent format
+
+Each agent in [`agents/`](agents) is a Markdown file with YAML frontmatter. The body is the system prompt.
+
+**Gemini CLI**
+
+```markdown
+---
+name: security-auditor
+description: Reviews code for security weaknesses and recommends fixes.
+kind: local
+tools:
+  - read_file
+  - grep_search
+model: gemini-3-pro-preview
+temperature: 0.2
+max_turns: 20
+---
+You are a defensive security reviewer...
+```
+
+| Field | Required | Purpose |
+|-------|:--------:|---------|
+| `name` | ✅ | Unique slug, used as the tool name and with `@name` |
+| `description` | ✅ | When to use this agent; the router reads it to decide |
+| `kind` | | `local` (default) or `remote` (A2A) |
+| `tools` | | Tool allowlist; supports `*` and `mcp_*` wildcards. Omit to inherit all tools |
+| `mcpServers` | | MCP servers available only to this agent |
+| `model` | | Pin a model, or `inherit` the session's |
+| `temperature` | | `0.0` to `2.0` (default `1`) |
+| `max_turns` | | Turn budget (default `30`) |
+| `timeout_mins` | | Time budget in minutes (default `10`) |
+
+**Antigravity CLI**
+
+The same agent, converted by [`scripts/build-antigravity.sh`](scripts/build-antigravity.sh):
+
+```markdown
+---
+name: security-auditor
+description: Reviews code for security weaknesses and recommends fixes.
+tools:
+  - view_file
+  - list_dir
+  - grep_search
+  - find_by_name
+model: pro
+---
+You are a defensive security reviewer...
+```
+
+Antigravity uses `model: pro | flash | inherit` and its own tool names (`view_file`, `grep_search`, `find_by_name`, `write_to_file`, `replace_file_content`, `run_command`, `search_web` and others). It also supports `mainAgent`, `subagent`, `commandExecutionPolicy`, `mcpServers` and `skills`. See the [Antigravity subagents docs](https://antigravity.google/docs/subagents) and the [Gemini CLI subagents docs](https://geminicli.com/docs/core/subagents/) for the full references.
+
+## ❓ FAQ
+
+**Which should I use, Gemini CLI or Antigravity CLI?**
+Google moved free and Google One users from Gemini CLI to Antigravity CLI in June 2026. Gemini CLI is still maintained for Gemini Code Assist Standard and Enterprise. This collection supports both, so use whichever you have.
+
+**Will 81 agents slow things down or confuse the router?**
+Not noticeably. Until it delegates, the main agent only sees each agent's name and one-line description, not the full prompt. If you want a leaner set, install just the categories you use with `--category`.
+
+**Can a subagent change my files?**
+Only through the tools it declares. Reviewers and auditors such as `code-reviewer`, `security-auditor` and `secrets-detector` have no file-writing tools. Some of them can run shell commands (for example `git diff` or a dependency scan), which go through your CLI's normal approval and sandbox settings. Builders such as `python-pro` can edit files and run commands.
+
+**Can I edit them?**
+Yes, they are CC0. Copy one, change the prompt, and make it yours. If your change would help everyone, open a PR.
 
 ## Contributing
 
-New agents, improvements to existing prompts, and fixes are all welcome. Keep each agent focused, use the standard frontmatter, and write a system prompt you would actually want doing the job. See [CONTRIBUTING.md](CONTRIBUTING.md) for the short version.
+New agents, sharper prompts and fixes are all welcome. Edit or add files in [`agents/`](agents) only, then run:
+
+```bash
+./scripts/build-antigravity.sh   # regenerate the Antigravity versions
+./scripts/validate.sh            # the same checks CI runs
+```
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the quality bar.
 
 ## License
 
-[CC0 1.0 Universal](LICENSE) — public domain. Copy, adapt, and use these agents freely, no attribution required.
+[CC0 1.0 Universal](LICENSE): public domain. Copy, adapt and use these agents freely, no attribution required.
 
 <div align="center">
 
-**If these subagents save you time, a ⭐ helps other Gemini CLI users find them.**
+**If these subagents save you time, a ⭐ helps other Gemini CLI and Antigravity users find them.**
 
 </div>
