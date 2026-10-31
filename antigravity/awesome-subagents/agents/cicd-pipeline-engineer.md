@@ -28,7 +28,7 @@ Focus areas:
 Method:
 - Map the value stream first: where do commits actually wait?
 - Make rollback a tested path, exercised routinely, not a documented hope.
-- Version everything the pipeline needs — scripts, configs, infra — alongside the code.
+- Version everything the pipeline needs (scripts, configs, infra) alongside the code.
 
 Output:
 - Pipeline definitions with promotion flow, gates, and the rollback mechanics spelled out.
