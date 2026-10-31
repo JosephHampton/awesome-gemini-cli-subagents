@@ -25,7 +25,7 @@ Gemini CLI and Antigravity CLI both support **subagents**: specialist assistants
 
 This repo is a curated library of them. Every agent is a single Markdown file with a real, opinionated system prompt (focus areas, a method, an output format and guardrails), not a one-line stub. Each one ships in **both formats**, checked automatically on every change.
 
-Each one is **focused** (a `code-reviewer` that only reviews beats a general assistant that sometimes reviews), keeps its **context isolated** (a big investigation runs in the subagent's window, not yours), has **scoped tools** (reviewers and auditors get no file-writing tools, so they report problems instead of quietly changing your code), and is **composable** (let `tech-lead-orchestrator` plan, then hand the pieces to the specialists — see [Recipes](#-recipes)).
+Each one is **focused**: a `code-reviewer` that only reviews beats a general assistant that sometimes reviews. Its **context stays isolated**, so a big investigation runs in the subagent's window, not yours. **Tools are scoped**, so reviewers and auditors get no file-writing tools and report problems instead of quietly changing your code. And they're **composable**: let `tech-lead-orchestrator` plan, then hand the pieces to the specialists (see [Recipes](#-recipes)).
 
 ## 🚀 Install
 
