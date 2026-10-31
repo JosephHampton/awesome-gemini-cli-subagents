@@ -8,6 +8,8 @@ Code review, security audits, testing, DevOps, data and AI, and 17 language and 
 
 [![validate](https://github.com/JosephHampton/awesome-gemini-cli-subagents/actions/workflows/validate.yml/badge.svg)](https://github.com/JosephHampton/awesome-gemini-cli-subagents/actions/workflows/validate.yml)
 ![Subagents](https://img.shields.io/badge/subagents-81-4285F4)
+[![GitHub stars](https://img.shields.io/github/stars/JosephHampton/awesome-gemini-cli-subagents?style=flat&logo=github&color=4285F4)](https://github.com/JosephHampton/awesome-gemini-cli-subagents/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/JosephHampton/awesome-gemini-cli-subagents?style=flat&logo=github&color=34A853)](https://github.com/JosephHampton/awesome-gemini-cli-subagents/fork)
 ![Gemini CLI](https://img.shields.io/badge/Gemini%20CLI-supported-8E75B2)
 ![Antigravity CLI](https://img.shields.io/badge/Antigravity%20CLI-supported-34A853)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](LICENSE)
@@ -300,6 +302,12 @@ New agents, sharper prompts and fixes are all welcome. Edit or add files in [`ag
 ```
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the quality bar.
+
+## 📈 Star history
+
+<a href="https://star-history.com/#JosephHampton/awesome-gemini-cli-subagents&Date">
+  <img src="https://api.star-history.com/svg?repos=JosephHampton/awesome-gemini-cli-subagents&type=Date" alt="Star History Chart" width="600">
+</a>
 
 ## License
 
