@@ -2,12 +2,12 @@
 
 # 🤖 Awesome Gemini CLI & Antigravity Subagents [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-### 81 production-ready subagents for [Gemini CLI](https://github.com/google-gemini/gemini-cli) and [Antigravity CLI](https://antigravity.google/docs/subagents)
+### 82 production-ready subagents for [Gemini CLI](https://github.com/google-gemini/gemini-cli) and [Antigravity CLI](https://antigravity.google/docs/subagents)
 
 Code review, security audits, testing, DevOps, data and AI, and 17 language and framework experts. Install them in one line and let the main agent delegate to the right specialist.
 
 [![validate](https://github.com/JosephHampton/awesome-gemini-cli-subagents/actions/workflows/validate.yml/badge.svg)](https://github.com/JosephHampton/awesome-gemini-cli-subagents/actions/workflows/validate.yml)
-![Subagents](https://img.shields.io/badge/subagents-81-4285F4)
+![Subagents](https://img.shields.io/badge/subagents-82-4285F4)
 [![GitHub stars](https://img.shields.io/github/stars/JosephHampton/awesome-gemini-cli-subagents?style=flat&logo=github&color=4285F4)](https://github.com/JosephHampton/awesome-gemini-cli-subagents/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/JosephHampton/awesome-gemini-cli-subagents?style=flat&logo=github&color=34A853)](https://github.com/JosephHampton/awesome-gemini-cli-subagents/fork)
 ![Gemini CLI](https://img.shields.io/badge/Gemini%20CLI-supported-8E75B2)
@@ -137,6 +137,7 @@ Then just describe the work, e.g. _"review this diff for security issues"_, and 
 | [`refactoring-specialist`](agents/quality-testing/refactoring-specialist.md)     | Safe, behaviour-preserving refactors          |
 | [`load-testing-engineer`](agents/quality-testing/load-testing-engineer.md)       | Realistic load tests that name the bottleneck |
 | [`visual-regression-tester`](agents/quality-testing/visual-regression-tester.md) | Flake-proof screenshot testing for UI changes |
+| [`ponder-auditor`](agents/quality-testing/ponder-auditor.md)                     | Convergent multi-pass code audit with coverage gate |
 
 ### 🛡️ Security
 
