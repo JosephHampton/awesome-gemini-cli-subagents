@@ -2,12 +2,12 @@
 
 # 🤖 Awesome Gemini CLI & Antigravity Subagents [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-### 81 production-ready subagents for [Gemini CLI](https://github.com/google-gemini/gemini-cli) and [Antigravity CLI](https://antigravity.google/docs/subagents).
+### 89 production-ready subagents for [Gemini CLI](https://github.com/google-gemini/gemini-cli) and [Antigravity CLI](https://antigravity.google/docs/subagents).
 
 Code review, security audits, testing, DevOps, data and AI, and 17 language and framework experts. Install them in one line and let the main agent delegate to the right specialist.
 
 [![validate](https://github.com/JosephHampton/awesome-gemini-cli-subagents/actions/workflows/validate.yml/badge.svg)](https://github.com/JosephHampton/awesome-gemini-cli-subagents/actions/workflows/validate.yml)
-![Subagents](https://img.shields.io/badge/subagents-81-4285F4)
+![Subagents](https://img.shields.io/badge/subagents-89-4285F4)
 ![Gemini CLI](https://img.shields.io/badge/Gemini%20CLI-supported-8E75B2)
 ![Antigravity CLI](https://img.shields.io/badge/Antigravity%20CLI-supported-34A853)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](LICENSE)
@@ -93,6 +93,7 @@ Then just describe the work, e.g. *"review this diff for security issues"*, and 
 | [`electron-desktop-developer`](agents/core-development/electron-desktop-developer.md) | Secure Electron apps with native-feeling UX |
 | [`browser-extension-developer`](agents/core-development/browser-extension-developer.md) | Manifest V3 extensions for Chrome and Firefox |
 | [`realtime-websocket-engineer`](agents/core-development/realtime-websocket-engineer.md) | WebSocket / SSE systems that survive disconnects |
+| [`design-system-engineer`](agents/core-development/design-system-engineer.md) | Component libraries, design tokens, and accessible theming |
 
 ### 🧠 Language Specialists
 
@@ -131,6 +132,8 @@ Then just describe the work, e.g. *"review this diff for security issues"*, and 
 | [`serverless-architect`](agents/infrastructure-devops/serverless-architect.md) | Event-driven serverless with idempotency built in |
 | [`observability-engineer`](agents/infrastructure-devops/observability-engineer.md) | Logs, metrics, traces, SLOs, and alerts that matter |
 | [`cicd-pipeline-engineer`](agents/infrastructure-devops/cicd-pipeline-engineer.md) | Build-once promotion pipelines with tested rollback |
+| [`platform-engineer`](agents/infrastructure-devops/platform-engineer.md) | Golden paths, self-service templates, and developer portals |
+| [`finops-engineer`](agents/infrastructure-devops/finops-engineer.md) | Cloud cost cuts, rightsizing, and unit economics |
 
 ### ✅ Quality & Testing
 
@@ -155,6 +158,8 @@ Then just describe the work, e.g. *"review this diff for security issues"*, and 
 | [`threat-modeler`](agents/security/threat-modeler.md) | Design-time STRIDE threat modeling |
 | [`auth-reviewer`](agents/security/auth-reviewer.md) | Review authentication and authorization logic |
 | [`container-security-auditor`](agents/security/container-security-auditor.md) | Image, Kubernetes, and supply-chain hardening |
+| [`ai-red-teamer`](agents/security/ai-red-teamer.md) | Adversarial testing of AI systems: injection, jailbreaks, exfiltration |
+| [`privacy-engineer`](agents/security/privacy-engineer.md) | PII mapping, data minimization, retention, and GDPR/CCPA requests |
 
 ### 📊 Data, AI & Databases
 
@@ -173,6 +178,9 @@ Then just describe the work, e.g. *"review this diff for security issues"*, and 
 | [`redis-expert`](agents/data-ai-databases/redis-expert.md) | Caching, queues, and realtime data in Redis |
 | [`mlops-engineer`](agents/data-ai-databases/mlops-engineer.md) | Reproducible training pipelines and monitored models |
 | [`data-visualization-engineer`](agents/data-ai-databases/data-visualization-engineer.md) | Honest, fast charts and dashboards |
+| [`mcp-server-engineer`](agents/data-ai-databases/mcp-server-engineer.md) | Safe Model Context Protocol servers: tools, resources, transports |
+| [`llm-evals-engineer`](agents/data-ai-databases/llm-evals-engineer.md) | Eval suites, graders, and CI gates for LLM features |
+| [`voice-ai-engineer`](agents/data-ai-databases/voice-ai-engineer.md) | Realtime voice agents: STT/TTS, turn-taking, low latency |
 
 ### 🧰 Developer Experience
 
@@ -281,7 +289,7 @@ Antigravity uses `model: pro | flash | inherit` and its own tool names (`view_fi
 **Which should I use, Gemini CLI or Antigravity CLI?**
 Google moved free and Google One users from Gemini CLI to Antigravity CLI in June 2026. Gemini CLI is still maintained for Gemini Code Assist Standard and Enterprise. This collection supports both, so use whichever you have.
 
-**Will 81 agents slow things down or confuse the router?**
+**Will 89 agents slow things down or confuse the router?**
 Not noticeably. Until it delegates, the main agent only sees each agent's name and one-line description, not the full prompt. If you want a leaner set, install just the categories you use with `--category`.
 
 **Can a subagent change my files?**
