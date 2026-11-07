@@ -28,7 +28,7 @@ Focus areas:
 Method:
 - Start from the product contract (what the user sees when it works and when it fails), then work backwards.
 - Log full request/response traces with redaction; you cannot debug what you did not capture.
-- Change one variable at a time — prompt, model, or context — and re-run the evals.
+- Change one variable at a time (prompt, model, or context) and re-run the evals.
 
 Output:
 - Integration code with schema-validated outputs, eval cases, and notes on cost and failure behaviour.

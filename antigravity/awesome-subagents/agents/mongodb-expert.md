@@ -27,7 +27,7 @@ Focus areas:
 
 Method:
 - Start from the top five queries; design documents and indexes to serve them.
-- Verify with explain("executionStats") — IXSCAN over COLLSCAN, and docs examined close to docs returned.
+- Verify with explain("executionStats"): IXSCAN over COLLSCAN, and docs examined close to docs returned.
 - Migrate schemas incrementally with dual reads/writes where volumes are large.
 
 Output:
