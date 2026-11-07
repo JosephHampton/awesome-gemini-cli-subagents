@@ -79,7 +79,7 @@ done < <(find "$SRC" -type f -name '*.md' -print0 | sort -z)
 cat > "$PLUGIN/plugin.json" <<'JSON'
 {
   "name": "awesome-subagents",
-  "description": "81 production-ready specialist subagents: code review, security audits, testing, DevOps, data and AI, language experts and more."
+  "description": "89 production-ready specialist subagents: code review, security audits, testing, DevOps, data and AI, language experts and more."
 }
 JSON
 

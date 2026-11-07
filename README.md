@@ -2,12 +2,12 @@
 
 # 🤖 Awesome Gemini CLI & Antigravity Subagents [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-### 81 production-ready subagents for [Gemini CLI](https://github.com/google-gemini/gemini-cli) and [Antigravity CLI](https://antigravity.google/docs/subagents)
+### 89 production-ready subagents for [Gemini CLI](https://github.com/google-gemini/gemini-cli) and [Antigravity CLI](https://antigravity.google/docs/subagents)
 
 Code review, security audits, testing, DevOps, data and AI, and 17 language and framework experts. Install them in one line and let the main agent delegate to the right specialist.
 
 [![validate](https://github.com/JosephHampton/awesome-gemini-cli-subagents/actions/workflows/validate.yml/badge.svg)](https://github.com/JosephHampton/awesome-gemini-cli-subagents/actions/workflows/validate.yml)
-![Subagents](https://img.shields.io/badge/subagents-81-4285F4)
+![Subagents](https://img.shields.io/badge/subagents-89-4285F4)
 [![GitHub stars](https://img.shields.io/github/stars/JosephHampton/awesome-gemini-cli-subagents?style=flat&logo=github&color=4285F4)](https://github.com/JosephHampton/awesome-gemini-cli-subagents/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/JosephHampton/awesome-gemini-cli-subagents?style=flat&logo=github&color=34A853)](https://github.com/JosephHampton/awesome-gemini-cli-subagents/fork)
 ![Gemini CLI](https://img.shields.io/badge/Gemini%20CLI-supported-8E75B2)
@@ -86,6 +86,7 @@ Then just describe the work, e.g. _"review this diff for security issues"_, and 
 | [`electron-desktop-developer`](agents/core-development/electron-desktop-developer.md)   | Secure Electron apps with native-feeling UX                   |
 | [`browser-extension-developer`](agents/core-development/browser-extension-developer.md) | Manifest V3 extensions for Chrome and Firefox                 |
 | [`realtime-websocket-engineer`](agents/core-development/realtime-websocket-engineer.md) | WebSocket / SSE systems that survive disconnects              |
+| [`design-system-engineer`](agents/core-development/design-system-engineer.md)           | Component libraries, design tokens, and accessible theming    |
 
 ### 🧠 Language Specialists
 
@@ -111,19 +112,21 @@ Then just describe the work, e.g. _"review this diff for security issues"_, and 
 
 ### ☁️ Infrastructure & DevOps
 
-| Agent                                                                                    | What it does                                         |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| [`devops-engineer`](agents/infrastructure-devops/devops-engineer.md)                     | CI/CD pipelines and release automation               |
-| [`kubernetes-operator`](agents/infrastructure-devops/kubernetes-operator.md)             | Kubernetes workloads, manifests, and troubleshooting |
-| [`terraform-engineer`](agents/infrastructure-devops/terraform-engineer.md)               | Modular, safe Terraform / OpenTofu                   |
-| [`cloud-architect`](agents/infrastructure-devops/cloud-architect.md)                     | Cloud infra on AWS / GCP / Azure with cost in mind   |
-| [`docker-specialist`](agents/infrastructure-devops/docker-specialist.md)                 | Lean, secure Dockerfiles and Compose setups          |
-| [`sre-incident-responder`](agents/infrastructure-devops/sre-incident-responder.md)       | Incident triage and blameless postmortems            |
-| [`aws-specialist`](agents/infrastructure-devops/aws-specialist.md)                       | AWS services, IAM, networking, and cost awareness    |
-| [`github-actions-specialist`](agents/infrastructure-devops/github-actions-specialist.md) | Fast, secure GitHub Actions pipelines                |
-| [`serverless-architect`](agents/infrastructure-devops/serverless-architect.md)           | Event-driven serverless with idempotency built in    |
-| [`observability-engineer`](agents/infrastructure-devops/observability-engineer.md)       | Logs, metrics, traces, SLOs, and alerts that matter  |
-| [`cicd-pipeline-engineer`](agents/infrastructure-devops/cicd-pipeline-engineer.md)       | Build-once promotion pipelines with tested rollback  |
+| Agent                                                                                    | What it does                                                |
+| ---------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| [`devops-engineer`](agents/infrastructure-devops/devops-engineer.md)                     | CI/CD pipelines and release automation                      |
+| [`kubernetes-operator`](agents/infrastructure-devops/kubernetes-operator.md)             | Kubernetes workloads, manifests, and troubleshooting        |
+| [`terraform-engineer`](agents/infrastructure-devops/terraform-engineer.md)               | Modular, safe Terraform / OpenTofu                          |
+| [`cloud-architect`](agents/infrastructure-devops/cloud-architect.md)                     | Cloud infra on AWS / GCP / Azure with cost in mind          |
+| [`docker-specialist`](agents/infrastructure-devops/docker-specialist.md)                 | Lean, secure Dockerfiles and Compose setups                 |
+| [`sre-incident-responder`](agents/infrastructure-devops/sre-incident-responder.md)       | Incident triage and blameless postmortems                   |
+| [`aws-specialist`](agents/infrastructure-devops/aws-specialist.md)                       | AWS services, IAM, networking, and cost awareness           |
+| [`github-actions-specialist`](agents/infrastructure-devops/github-actions-specialist.md) | Fast, secure GitHub Actions pipelines                       |
+| [`serverless-architect`](agents/infrastructure-devops/serverless-architect.md)           | Event-driven serverless with idempotency built in           |
+| [`observability-engineer`](agents/infrastructure-devops/observability-engineer.md)       | Logs, metrics, traces, SLOs, and alerts that matter         |
+| [`cicd-pipeline-engineer`](agents/infrastructure-devops/cicd-pipeline-engineer.md)       | Build-once promotion pipelines with tested rollback         |
+| [`platform-engineer`](agents/infrastructure-devops/platform-engineer.md)                 | Golden paths, self-service templates, and developer portals |
+| [`finops-engineer`](agents/infrastructure-devops/finops-engineer.md)                     | Cloud cost cuts, rightsizing, and unit economics            |
 
 ### ✅ Quality & Testing
 
@@ -140,32 +143,37 @@ Then just describe the work, e.g. _"review this diff for security issues"_, and 
 
 ### 🛡️ Security
 
-| Agent                                                                         | What it does                                                |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| [`security-auditor`](agents/security/security-auditor.md)                     | Defensive code review for common vulnerability classes      |
-| [`dependency-auditor`](agents/security/dependency-auditor.md)                 | Third-party CVE and supply-chain review                     |
-| [`secrets-detector`](agents/security/secrets-detector.md)                     | Detect committed secrets so they can be rotated and removed |
-| [`threat-modeler`](agents/security/threat-modeler.md)                         | Design-time STRIDE threat modeling                          |
-| [`auth-reviewer`](agents/security/auth-reviewer.md)                           | Review authentication and authorization logic               |
-| [`container-security-auditor`](agents/security/container-security-auditor.md) | Image, Kubernetes, and supply-chain hardening               |
+| Agent                                                                         | What it does                                                           |
+| ----------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [`security-auditor`](agents/security/security-auditor.md)                     | Defensive code review for common vulnerability classes                 |
+| [`dependency-auditor`](agents/security/dependency-auditor.md)                 | Third-party CVE and supply-chain review                                |
+| [`secrets-detector`](agents/security/secrets-detector.md)                     | Detect committed secrets so they can be rotated and removed            |
+| [`threat-modeler`](agents/security/threat-modeler.md)                         | Design-time STRIDE threat modeling                                     |
+| [`auth-reviewer`](agents/security/auth-reviewer.md)                           | Review authentication and authorization logic                          |
+| [`container-security-auditor`](agents/security/container-security-auditor.md) | Image, Kubernetes, and supply-chain hardening                          |
+| [`ai-red-teamer`](agents/security/ai-red-teamer.md)                           | Adversarial testing of AI systems: injection, jailbreaks, exfiltration |
+| [`privacy-engineer`](agents/security/privacy-engineer.md)                     | PII mapping, data minimization, retention, and GDPR/CCPA requests      |
 
 ### 📊 Data, AI & Databases
 
-| Agent                                                                                    | What it does                                          |
-| ---------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| [`data-engineer`](agents/data-ai-databases/data-engineer.md)                             | Reliable ETL / ELT and data pipelines                 |
-| [`ml-engineer`](agents/data-ai-databases/ml-engineer.md)                                 | Reproducible ML training, evaluation, and deployment  |
-| [`prompt-engineer`](agents/data-ai-databases/prompt-engineer.md)                         | Testable LLM prompts and agent instructions           |
-| [`sql-pro`](agents/data-ai-databases/sql-pro.md)                                         | Query writing and performance tuning                  |
-| [`postgres-expert`](agents/data-ai-databases/postgres-expert.md)                         | Deep PostgreSQL tuning and features                   |
-| [`database-designer`](agents/data-ai-databases/database-designer.md)                     | Relational schema and data modeling                   |
-| [`analytics-engineer`](agents/data-ai-databases/analytics-engineer.md)                   | Trustworthy analytics models and metrics              |
-| [`llm-integration-engineer`](agents/data-ai-databases/llm-integration-engineer.md)       | LLM product features with evals and cost control      |
-| [`rag-architect`](agents/data-ai-databases/rag-architect.md)                             | Retrieval-augmented generation that cites its sources |
-| [`mongodb-expert`](agents/data-ai-databases/mongodb-expert.md)                           | Document modelling and aggregation performance        |
-| [`redis-expert`](agents/data-ai-databases/redis-expert.md)                               | Caching, queues, and realtime data in Redis           |
-| [`mlops-engineer`](agents/data-ai-databases/mlops-engineer.md)                           | Reproducible training pipelines and monitored models  |
-| [`data-visualization-engineer`](agents/data-ai-databases/data-visualization-engineer.md) | Honest, fast charts and dashboards                    |
+| Agent                                                                                    | What it does                                                      |
+| ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| [`data-engineer`](agents/data-ai-databases/data-engineer.md)                             | Reliable ETL / ELT and data pipelines                             |
+| [`ml-engineer`](agents/data-ai-databases/ml-engineer.md)                                 | Reproducible ML training, evaluation, and deployment              |
+| [`prompt-engineer`](agents/data-ai-databases/prompt-engineer.md)                         | Testable LLM prompts and agent instructions                       |
+| [`sql-pro`](agents/data-ai-databases/sql-pro.md)                                         | Query writing and performance tuning                              |
+| [`postgres-expert`](agents/data-ai-databases/postgres-expert.md)                         | Deep PostgreSQL tuning and features                               |
+| [`database-designer`](agents/data-ai-databases/database-designer.md)                     | Relational schema and data modeling                               |
+| [`analytics-engineer`](agents/data-ai-databases/analytics-engineer.md)                   | Trustworthy analytics models and metrics                          |
+| [`llm-integration-engineer`](agents/data-ai-databases/llm-integration-engineer.md)       | LLM product features with evals and cost control                  |
+| [`rag-architect`](agents/data-ai-databases/rag-architect.md)                             | Retrieval-augmented generation that cites its sources             |
+| [`mongodb-expert`](agents/data-ai-databases/mongodb-expert.md)                           | Document modelling and aggregation performance                    |
+| [`redis-expert`](agents/data-ai-databases/redis-expert.md)                               | Caching, queues, and realtime data in Redis                       |
+| [`mlops-engineer`](agents/data-ai-databases/mlops-engineer.md)                           | Reproducible training pipelines and monitored models              |
+| [`data-visualization-engineer`](agents/data-ai-databases/data-visualization-engineer.md) | Honest, fast charts and dashboards                                |
+| [`mcp-server-engineer`](agents/data-ai-databases/mcp-server-engineer.md)                 | Safe Model Context Protocol servers: tools, resources, transports |
+| [`llm-evals-engineer`](agents/data-ai-databases/llm-evals-engineer.md)                   | Eval suites, graders, and CI gates for LLM features               |
+| [`voice-ai-engineer`](agents/data-ai-databases/voice-ai-engineer.md)                     | Realtime voice agents: STT/TTS, turn-taking, low latency          |
 
 ### 🧰 Developer Experience
 
@@ -275,7 +283,7 @@ Antigravity uses `model: pro | flash | inherit` and its own tool names (`view_fi
 **Which should I use, Gemini CLI or Antigravity CLI?**
 Google moved free and Google One users from Gemini CLI to Antigravity CLI in June 2026. Gemini CLI is still maintained for Gemini Code Assist Standard and Enterprise. This collection supports both, so use whichever you have.
 
-**Will 81 agents slow things down or confuse the router?**
+**Will 89 agents slow things down or confuse the router?**
 Not noticeably. Until it delegates, the main agent only sees each agent's name and one-line description, not the full prompt. If you want a leaner set, install just the categories you use with `--category`.
 
 **Can a subagent change my files?**

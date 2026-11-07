@@ -2,6 +2,10 @@
 
 All notable changes to this project are documented here.
 
+## v1.3.0
+
+- 8 new subagents (89 total): `mcp-server-engineer`, `llm-evals-engineer` and `voice-ai-engineer` (data, AI and databases); `ai-red-teamer` and `privacy-engineer` (security); `finops-engineer` and `platform-engineer` (infrastructure and DevOps); `design-system-engineer` (core development). Each ships in both Gemini CLI and Antigravity formats.
+
 ## v1.2.0
 
 - **Antigravity CLI support.** All 81 agents now ship in Antigravity's subagent format as a ready-made plugin (`antigravity/awesome-subagents/`), generated from `agents/` by `scripts/build-antigravity.sh` and checked with `agy plugin validate --strict`. Gemini-format files are skipped by Antigravity, so this is needed to use them there.
