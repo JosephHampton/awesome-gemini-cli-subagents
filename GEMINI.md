@@ -1,6 +1,6 @@
 # Repository context for coding agents
 
-This repository is **Awesome Gemini CLI & Antigravity Subagents**: a curated library of subagent definitions for Gemini CLI and Antigravity CLI.
+This repository is **Awesome Gemini CLI & Antigravity Subagents**: a curated, open-source library of production-ready AI coding subagent definitions for Gemini CLI and Antigravity CLI.
 
 ## Structure
 

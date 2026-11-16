@@ -2,9 +2,9 @@
 
 # 🤖 Awesome Gemini CLI & Antigravity Subagents [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-### 89 production-ready subagents for [Gemini CLI](https://github.com/google-gemini/gemini-cli) and [Antigravity CLI](https://antigravity.google/docs/subagents)
+### 89 production-ready AI coding subagents for [Gemini CLI](https://github.com/google-gemini/gemini-cli) and [Antigravity CLI](https://antigravity.google/docs/subagents)
 
-Code review, security audits, testing, DevOps, data and AI, and 17 language and framework experts. Install them in one line and let the main agent delegate to the right specialist.
+Automated code review, security auditing, test generation, DevOps automation, data engineering, AI/ML pipelines, and 17 language and framework specialists. One-line install, opinionated system prompts, and full tool scoping. Let the main agent delegate to the right specialist.
 
 [![validate](https://github.com/JosephHampton/awesome-gemini-cli-subagents/actions/workflows/validate.yml/badge.svg)](https://github.com/JosephHampton/awesome-gemini-cli-subagents/actions/workflows/validate.yml)
 ![Subagents](https://img.shields.io/badge/subagents-89-4285F4)
@@ -14,6 +14,7 @@ Code review, security audits, testing, DevOps, data and AI, and 17 language and 
 ![Antigravity CLI](https://img.shields.io/badge/Antigravity%20CLI-supported-34A853)
 ![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+![Last updated](https://img.shields.io/badge/updated-November%202026-blue)
 
 </div>
 
@@ -21,11 +22,11 @@ Code review, security audits, testing, DevOps, data and AI, and 17 language and 
 
 ## What is this
 
-Gemini CLI and Antigravity CLI both support **subagents**: specialist assistants the main agent hands work to. Each one has its own system prompt, its own tools and its own context window, so it stays sharp on one job instead of being average at everything.
+Gemini CLI and Antigravity CLI both support **subagents**: specialist AI coding assistants the main agent delegates work to. Each subagent has its own system prompt, its own tools and its own context window, so it stays sharp on one job instead of being average at everything.
 
-This repo is a curated library of them. Every agent is a single Markdown file with a real, opinionated system prompt (focus areas, a method, an output format and guardrails), not a one-line stub. Each one ships in **both formats**, checked automatically on every change.
+This repo is a curated, open-source library of production-ready subagents. Every agent is a single Markdown file with a real, opinionated system prompt (focus areas, a method, an output format and guardrails), not a one-line stub. Each one ships in **both Gemini CLI and Antigravity CLI formats**, validated automatically on every change.
 
-Each one is **focused**: a `code-reviewer` that only reviews beats a general assistant that sometimes reviews. Its **context stays isolated**, so a big investigation runs in the subagent's window, not yours. **Tools are scoped**, so reviewers and auditors get no file-writing tools and report problems instead of quietly changing your code. And they're **composable**: let `tech-lead-orchestrator` plan, then hand the pieces to the specialists (see [Recipes](#-recipes)).
+Each subagent is **focused**: a `code-reviewer` that only reviews beats a general assistant that sometimes reviews. Its **context stays isolated**, so a big investigation runs in the subagent's window, not yours. **Tools are scoped**, so reviewers and auditors get no file-writing tools and report problems instead of quietly changing your code. And they're **composable**: let `tech-lead-orchestrator` plan, then hand the pieces to the specialists (see [Recipes](#-recipes)).
 
 ## 🚀 Install
 
@@ -283,8 +284,8 @@ Antigravity uses `model: pro | flash | inherit` and its own tool names (`view_fi
 **Which should I use, Gemini CLI or Antigravity CLI?**
 Google moved free and Google One users from Gemini CLI to Antigravity CLI in June 2026. Gemini CLI is still maintained for Gemini Code Assist Standard and Enterprise. This collection supports both, so use whichever you have.
 
-**Will 89 agents slow things down or confuse the router?**
-Not noticeably. Until it delegates, the main agent only sees each agent's name and one-line description, not the full prompt. If you want a leaner set, install just the categories you use with `--category`.
+**Will 89 subagents slow things down or confuse the router?**
+Not noticeably. Until it delegates, the main agent only sees each subagent's name and one-line description, not the full system prompt. If you want a leaner set, install just the categories you use with `--category`.
 
 **Can a subagent change my files?**
 Only through the tools it declares. Reviewers and auditors such as `code-reviewer`, `security-auditor` and `secrets-detector` have no file-writing tools. Some of them can run shell commands (for example `git diff` or a dependency scan), which go through your CLI's normal approval and sandbox settings. Builders such as `python-pro` can edit files and run commands.
@@ -311,6 +312,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the quality bar.
 
 <div align="center">
 
-**If these subagents save you time, a ⭐ helps other Gemini CLI and Antigravity users find them.**
+**If these AI coding subagents save you time, a ⭐ helps other Gemini CLI and Antigravity CLI users find them.**
 
 </div>

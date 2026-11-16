@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate agents, README and the Antigravity plugin
+      - name: Validate subagents, README and the Antigravity plugin
         run: ./scripts/validate.sh
       - name: Installer smoke test
         run: |

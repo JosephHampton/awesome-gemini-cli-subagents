@@ -2,6 +2,10 @@
 
 All notable changes to this project are documented here.
 
+## v1.3.1
+
+- Documentation refresh: improved SEO metadata, consistent terminology across all docs and templates, normalized whitespace across all source files.
+
 ## v1.3.0
 
 - 8 new subagents (89 total): `mcp-server-engineer`, `llm-evals-engineer` and `voice-ai-engineer` (data, AI and databases); `ai-red-teamer` and `privacy-engineer` (security); `finops-engineer` and `platform-engineer` (infrastructure and DevOps); `design-system-engineer` (core development). Each ships in both Gemini CLI and Antigravity formats.

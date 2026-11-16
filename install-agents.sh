@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Install the Awesome Gemini CLI Subagents for Gemini CLI or Antigravity CLI.
+# Install the Awesome Gemini CLI & Antigravity AI coding subagents.
 #
 # Usage:
 #   ./install-agents.sh                        # Gemini CLI, user-level (~/.gemini/agents)

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Check every agent before it ships. Run locally or in CI:
+# Validate every subagent before it ships. Run locally or in CI:
 #   ./scripts/validate.sh
 #
 # - frontmatter opens and closes, has name + description
