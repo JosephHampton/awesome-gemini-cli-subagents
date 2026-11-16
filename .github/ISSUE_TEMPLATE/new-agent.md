@@ -1,6 +1,6 @@
 ---
-name: Propose a new subagent
-about: Suggest a new subagent for Gemini CLI and Antigravity CLI
+name: Propose a new AI coding subagent
+about: Suggest a new AI coding subagent for Gemini CLI and Antigravity CLI
 title: "[agent] <name>"
 labels: new-agent
 ---

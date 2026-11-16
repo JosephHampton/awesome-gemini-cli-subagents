@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping grow this collection of subagents for Gemini CLI and Antigravity CLI. Contributions of new subagents, improved prompts, and fixes are all welcome.
+Thanks for helping grow this open-source collection of AI coding subagents for Gemini CLI and Antigravity CLI. Contributions of new subagents, improved system prompts, and fixes are all welcome.
 
 ## Adding a new subagent
 
@@ -35,7 +35,7 @@ Only edit files in `agents/`. Everything in `antigravity/` is generated from the
 
 ## Quality bar
 
-Agents in this list should be genuinely useful, not stubs. A good agent:
+Subagents in this collection should be genuinely useful, not stubs. A good subagent:
 
 - **Does one thing well.** If it needs "and also" in the description, it is probably two agents.
 - **Has a real system prompt.** Give it focus areas, a method, an expected output, and guardrails ("never do X"). Write the prompt you would actually want doing the job.

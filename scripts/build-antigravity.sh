@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Build the Antigravity CLI plugin from the Gemini CLI agents.
+# Build the Antigravity CLI plugin from the Gemini CLI subagents.
 #
 # agents/<category>/<name>.md is the single source of truth. This script converts
 # each one to Antigravity's subagent format and writes the plugin to
@@ -79,7 +79,7 @@ done < <(find "$SRC" -type f -name '*.md' -print0 | sort -z)
 cat > "$PLUGIN/plugin.json" <<'JSON'
 {
   "name": "awesome-subagents",
-  "description": "89 production-ready specialist subagents: code review, security audits, testing, DevOps, data and AI, language experts and more."
+  "description": "89 production-ready AI coding subagents: automated code review, security auditing, test generation, DevOps, data and AI pipelines, and 17 language and framework specialists."
 }
 JSON
 
