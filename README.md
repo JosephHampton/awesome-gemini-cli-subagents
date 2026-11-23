@@ -2,12 +2,12 @@
 
 # 🤖 Awesome Gemini CLI & Antigravity Subagents [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-### 89 production-ready AI coding subagents for [Gemini CLI](https://github.com/google-gemini/gemini-cli) and [Antigravity CLI](https://antigravity.google/docs/subagents)
+### 90 production-ready AI coding subagents for [Gemini CLI](https://github.com/google-gemini/gemini-cli) and [Antigravity CLI](https://antigravity.google/docs/subagents)
 
 Automated code review, security auditing, test generation, DevOps automation, data engineering, AI/ML pipelines, and 17 language and framework specialists. One-line install, opinionated system prompts, and full tool scoping. Let the main agent delegate to the right specialist.
 
 [![validate](https://github.com/JosephHampton/awesome-gemini-cli-subagents/actions/workflows/validate.yml/badge.svg)](https://github.com/JosephHampton/awesome-gemini-cli-subagents/actions/workflows/validate.yml)
-![Subagents](https://img.shields.io/badge/subagents-89-4285F4)
+![Subagents](https://img.shields.io/badge/subagents-90-4285F4)
 [![GitHub stars](https://img.shields.io/github/stars/JosephHampton/awesome-gemini-cli-subagents?style=flat&logo=github&color=4285F4)](https://github.com/JosephHampton/awesome-gemini-cli-subagents/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/JosephHampton/awesome-gemini-cli-subagents?style=flat&logo=github&color=34A853)](https://github.com/JosephHampton/awesome-gemini-cli-subagents/fork)
 ![Gemini CLI](https://img.shields.io/badge/Gemini%20CLI-supported-8E75B2)
@@ -154,6 +154,7 @@ Then just describe the work, e.g. _"review this diff for security issues"_, and 
 | [`container-security-auditor`](agents/security/container-security-auditor.md) | Image, Kubernetes, and supply-chain hardening                          |
 | [`ai-red-teamer`](agents/security/ai-red-teamer.md)                           | Adversarial testing of AI systems: injection, jailbreaks, exfiltration |
 | [`privacy-engineer`](agents/security/privacy-engineer.md)                     | PII mapping, data minimization, retention, and GDPR/CCPA requests      |
+| [`web-headers-csp-auditor`](agents/security/web-headers-csp-auditor.md)       | HTTP security headers, Nonce CSP, HSTS, COOP, and RFC 9116 security.txt |
 
 ### 📊 Data, AI & Databases
 
